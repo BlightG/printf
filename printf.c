@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 	va_list arg;
 	int i = 0, strlength, numPercent = 0, loopCounter = 0;
 	char * currStr;
-	bool inPercent = false;
 
 	va_start(arg, format);
 	strlength = strlen(format);
@@ -57,7 +56,7 @@ int _printf(const char *format, ...)
 			else if (format[loopCounter] == 's')
 			{
 				currStr = va_arg(arg, char *);
-				if (currStr == "\0" || !currStr)
+				if (*currStr == '\0' || !currStr)
 					currStr = "(null)";
 				i = _puts(currStr, i);
 				if (i > strlength)
@@ -92,7 +91,6 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				inPercent = false;
 				i--;
 			}
 		}
@@ -105,7 +103,7 @@ int _printf(const char *format, ...)
 			break;
 		_putchar(format[loopCounter], i);
 	}
-//	_putchar('\0', i);
+
 	i -= numPercent - 1;
 	va_end(arg);
 	return (i);

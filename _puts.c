@@ -19,6 +19,6 @@ int _puts(char *str, int i)
 		write(1, &str[j], 1);
 		i++;
 	}
-//	i--;
+
 	return (i);
 }
