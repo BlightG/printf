@@ -7,6 +7,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <math.h>
+#include <stdbool.h>
 int DecimalToOctal(unsigned int n, int i);
 int DecimalToHex(unsigned long int num, int i, int isLower);
 int printhex(unsigned long int hex, int i, int isLower);
