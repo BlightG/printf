@@ -15,15 +15,8 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 	strlength = strlen(format);
-	printf("strlen: %d\n", strlength); 
 	for (loopCounter = 0; loopCounter < strlength; i++, loopCounter++)
 	{
-		/**if (format[loopCounter] == '%' && format[loopCounter + 1] == '%')
-		{
-			loopCounter += 2;
-			numPercent++;
-			i = _putchar('%', i);
-		}**/
 		if (format[loopCounter] == '%' && format[loopCounter + 1] != '%')
 		{
 			loopCounter++;
