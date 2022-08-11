@@ -14,9 +14,11 @@ int _puts(char *str, int i)
 
 	for (j = 0; str[j] != '\0'; j++)
 	{
+		if (!&str[j])
+			break;
 		write(1, &str[j], 1);
-
+		i++;
 	}
-	i++;
+//	i--;
 	return (i);
 }
