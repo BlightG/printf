@@ -1,7 +1,8 @@
 #include "main.h"
 /**
-*
-*
+* main - entry point for program
+* 
+* Return: Always 0 if sucess
 */
 int main(void)
 {
