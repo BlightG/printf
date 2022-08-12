@@ -13,6 +13,11 @@ char *app_bin(va_list vList, char *temp)
 {
 	int num = va_arg(vList, int);
 
+	if (num == 0)
+	{
+		temp[0] = '0';
+		return (temp);
+	}
 	num_to_str(num, temp, 2, '0');
 	return (temp);
 }
