@@ -1,5 +1,13 @@
 #include "main.h"
-
+/**
+ * num_to_str - prints a set of string form numbers
+ *
+ * @str:str to be outputed
+ * @num:numbers to be converted
+ * @base: base of the string
+ * @type: type of the string
+ *
+*/
 void num_to_str(unsigned long int num, char *str, int base, char type)
 {
 	int i, rem, len = 0;
