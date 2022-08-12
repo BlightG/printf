@@ -1,3 +1,5 @@
+#include "main.h"
+
 char *app_hex(va_list vList, char *temp)
 {
 	unsigned long int num = va_arg(vList, unsigned long int);

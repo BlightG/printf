@@ -1,3 +1,5 @@
+#include "main.h"
+
 char *app_int(va_list vList, char *temp)
 {
 	int num = va_arg(vList, int);

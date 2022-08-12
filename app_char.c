@@ -1,3 +1,5 @@
+#include "main.h"
+
 char *app_char(va_list vList, char *temp)
 {
 	int i = 0;
