@@ -22,7 +22,8 @@ int _printf(char *str, ...)
 		{"o", app_octal},
 		{"x", app_hex},
 		{"X", app_hex_cap},
-		{"p", app_hex}
+		{"p", app_hex},
+		{"b", app_bin}
 	};
 	len = _strlen(str);
 	if (!str)
@@ -44,9 +45,9 @@ int _printf(char *str, ...)
 		{
 			i++;
 			j = 0;
-			while (j < 9 && (str[i] != *(printerFuncs[j].symbol)))
+			while (j < 10 && (str[i] != *(printerFuncs[j].symbol)))
 				j++;
-			if (j < 9)
+			if (j < 10)
 			{
 				if (printerFuncs[j].symbol[0] == 'p')
 				{
