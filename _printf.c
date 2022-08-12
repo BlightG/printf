@@ -51,7 +51,7 @@ int _printf(char *str, ...)
 			}
 			else
 				temp[0] = str[i];
-			strcat(&buffer[k],temp);
+			_strcat(&buffer[k],temp);
 			k += _strlen(temp);
 			i++;
 		}
@@ -66,7 +66,7 @@ int _printf(char *str, ...)
 	buffer[k + 1] = '\0';
 	len = _strlen(buffer);
 	writeToScreen(buffer, len);
-	strcpy(buffer, "");
+	_strcpy(buffer, "");
 	free(buffer);	
 	va_end(vList);
 	return (len);
