@@ -29,6 +29,7 @@ typedef struct print
 char *app_char(va_list, char *);
 char *app_str(va_list, char *);
 char *app_int(va_list, char *);
+char *app_bin(va_list, char *);
 char *app_unsigned_int(va_list, char *);
 char *app_octal(va_list, char *);
 char *app_hex(va_list, char *);
