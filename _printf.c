@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * _printf - prints the string passed to it.
+ *
+ * @str: string to be printed.
+ * Return: the length of the printed string.
+ */
+
 int _printf(char *str, ...)
 {
 	va_list vList;
@@ -31,7 +38,7 @@ int _printf(char *str, ...)
 		return (-1);
 	}
 	va_start(vList, str);
-	while(str[i] != '\0' && str[i])
+	while (str[i] != '\0' && str[i])
 	{
 		if (str[i] == '%')
 		{
@@ -51,7 +58,7 @@ int _printf(char *str, ...)
 			}
 			else
 				temp[0] = str[i];
-			_strcat(&buffer[k],temp);
+			_strcat(&buffer[k], temp);
 			k += _strlen(temp);
 			i++;
 		}
@@ -67,11 +74,19 @@ int _printf(char *str, ...)
 	len = _strlen(buffer);
 	writeToScreen(buffer, len);
 	_strcpy(buffer, "");
-	free(buffer);	
+	free(buffer);
 	va_end(vList);
 	return (len);
 }
 
+/**
+ * writeToScreen - writes to string the specified length.
+ *
+ * @str: stirng to be printed.
+ * @len: length of the string to be printed.
+ *
+ * Return: nothing.
+ */
 void writeToScreen(char *str, int len)
 {
 	write(1, str, len);

@@ -5,12 +5,20 @@
 #include <limits.h>
 #include <unistd.h>
 /** printers **/
-int _printf(char *,...);
+int _printf(char *, ...);
 void writeToScreen(char *, int);
 
 int _strlen(char *);
 void _strcat(char *, char *);
 /** struct for printer functions **/
+/**
+ * struct print - struct used to map
+ * symbols to functions.
+ *
+ * @symbol: key used to identify type.
+ * @print_func: pointer to function.
+ */
+
 typedef struct print
 {
 	char *symbol;
